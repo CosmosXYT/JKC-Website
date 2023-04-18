@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>JKC Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      data-tag="font"
+    />
+    <style>
+       body::-webkit-scrollbar {
+         width: 0.5em;
+         z-index: 100;
+         background-color:transparent;
+       }
+
+
+      body::-webkit-scrollbar-thumb {
+         background-color:white;
+         box-shadow:0 -100vh 0 100vh #5128f5;//magic
+       }
+    </style>
+  </head>
+  <body>
+<div>
+  <script
+    type="text/javascript"
+    src="https://unpkg.com/dangerous-html@0.1.12/dist/default/lib.umd.js"
+  ></script>
+  <link href="./home.css" rel="stylesheet" />
+  <main class="home-container">
+    <section class="home-hero">
+      <div class="home-menu">
+        <div id="mobile-menu" class="home-mobile-navigation">
+          <img
+            alt="pastedImage"
+            src="/playground_assets/pastedimage-no9b-1500h.png"
+            class="home-logo"
+          />
+          <div class="home-links">
+            <span class="Link">Solutions</span>
+            <span class="Link">How it works</span>
+            <span class="Link">Prices</span>
+          </div>
+          <div id="close-mobile-menu" class="home-close-mobile-menu">
+            <svg viewBox="0 0 804.5714285714286 1024" class="home-icon">
+              <path
+                d="M741.714 755.429c0 14.286-5.714 28.571-16 38.857l-77.714 77.714c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-168-168-168 168c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-77.714-77.714c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l168-168-168-168c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168 168-168c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857s-5.714 28.571-16 38.857l-168 168 168 168c10.286 10.286 16 24.571 16 38.857z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="home-desktop-navigation">
+          <nav class="home-centered">
+            <div class="home-left">
+              <img
+                alt="pastedImage"
+                src="/playground_assets/1677788737087159-200h.png"
+                class="home-logo1"
+              />
+              <div class="home-links1">
+                <span class="Link">Why?</span>
+                <span class="Link">Don&apos;t Click.</span>
+                <span class="Link">We will Take Your Money.</span>
+              </div>
+            </div>
+            <div class="home-right">
+              <span class="home-sign-in Link">Sign in</span>
+              <div class="home-get-started">
+                <span class="home-text06">Get started</span>
+              </div>
+              <div id="open-mobile-menu" class="home-burger-menu">
+                <img
+                  alt="pastedImage"
+                  src="/playground_assets/pastedimage-yxbd.svg"
+                  class="home-mobile-menu-button"
+                />
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div>
+          <dangerous-html
+            html="<script>
+/*
+Mobile menu - Code Embed
+*/
+
+// Mobile menu
+const mobileMenu = document.querySelector('#mobile-menu')
+
+// Buttons
+const closeButton = document.querySelector('#close-mobile-menu')
+const openButton = document.querySelector('#open-mobile-menu')
+
+// On openButton click, set the mobileMenu position left to -100vw
+openButton.addEventListener('click', function() {
+    mobileMenu.style.transform = 'translateX(0%)'
+})
+
+// On closeButton click, set the mobileMenu position to 0vw
+closeButton.addEventListener('click', function() {
+    mobileMenu.style.transform = 'translateX(100%)'
+})
+</script>"
+          ></dangerous-html>
+        </div>
+      </div>
+      <header class="home-header">
+        <h1 class="home-text07">JK Creations</h1>
+        <div class="home-get-started1">
+          <span class="home-text08">Don&apos;t Get Started!</span>
+        </div>
+      </header>
+    </section>
+    <section class="home-action-bar">
+      <div>
+        <dangerous-html
+          html="<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Button</title>
+	<style>
+		.video-button {
+		  position: relative;
+		  display: inline-block;
+		  border-radius: 20px;
+		  overflow: hidden;
+		  width: 300px;
+		  height: 200px;
+		}
+
+		.video-cover {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-image: url('https://img.youtube.com/vi/1SNqRlxxQKA/hqdefault.jpg');
+		  background-size: cover;
+		  opacity: 0.8;
+		  transition: opacity 0.3s ease-in-out;
+		}
+
+		.watch-video-button {
+		  position: absolute;
+		  bottom: 20px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  padding: 16px 40px;
+		  font-size: 18px;
+		  font-weight: bold;
+		  font-family: Arial, sans-serif;
+		  text-transform: uppercase;
+		  color: #fff;
+		  background-color: #5d3aff;
+		  border: none;
+		  border-radius: 20px;
+		  box-shadow: 0 5px 15px rgba(93, 58, 255, 0.5);
+		  cursor: pointer;
+		  transition: transform 0.3s ease-in-out;
+		}
+
+		.video-button:hover .watch-video-button {
+		  transform: scale(1.1);
+		}
+
+		.video-button:hover .video-cover {
+		  opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class='video-button'>
+	  <div class='video-cover'></div>
+	  <a href='https://www.youtube.com/watch?v=1SNqRlxxQKA' target='_blank' class='watch-video-button'>Watch Video</a>
+	</div>
+
+	<script>
+		const videoCover = document.querySelector('.video-cover');
+		videoCover.style.backgroundImage = `url('https://img.youtube.com/vi/1SNqRlxxQKA/hqdefault.jpg')`;
+	</script>
+</body>
+</html>
+"
+        ></dangerous-html>
+      </div>
+      <div class="home-action">
+        <div class="home-heading">
+          <span class="home-text09 title">Check out our Podcasts!</span>
+          <span class="home-text10">
+            This button will lead you to our Podcasts section on our YouTube
+            Channel
+          </span>
+          <div class="home-get-started2 template-button">
+            <span class="home-text11">
+              <span>Check it out</span>
+              <br />
+            </span>
+          </div>
+        </div>
+        <div class="home-images">
+          <img
+            alt="image"
+            src="/playground_assets/1677793443716774-1500w.png"
+            class="home-image"
+          />
+        </div>
+      </div>
+      <div>
+        <dangerous-html
+          html="<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Button</title>
+	<style>
+		.video-button {
+		  position: relative;
+		  display: inline-block;
+		  border-radius: 20px;
+		  overflow: hidden;
+		  width: 300px;
+		  height: 200px;
+		}
+
+		.video-cover {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-image: url('https://img.youtube.com/vi/1SNqRlxxQKA/hqdefault.jpg');
+		  background-size: cover;
+		  opacity: 0.8;
+		  transition: opacity 0.3s ease-in-out;
+		}
+
+		.watch-video-button {
+		  position: absolute;
+		  bottom: 20px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  padding: 16px 40px;
+		  font-size: 18px;
+		  font-weight: bold;
+		  text-transform: uppercase;
+		  color: #fff;
+		  background-color: #ff4d4d;
+		  border: none;
+		  border-radius: 20px;
+		  box-shadow: 0 5px 15px rgba(255, 77, 77, 0.5);
+		  cursor: pointer;
+		  transition: transform 0.3s ease-in-out;
+		}
+
+		.video-button:hover .watch-video-button {
+		  transform: scale(1.1);
+		}
+
+		.video-button:hover .video-cover {
+		  opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class='video-button'>
+	  <div class='video-cover'></div>
+	  <a href='https://www.youtube.com/watch?v=1SNqRlxxQKA' target='_blank' class='watch-video-button'>Watch Video</a>
+	</div>
+
+	<script>
+		const videoCover = document.querySelector('.video-cover');
+		videoCover.style.backgroundImage = `url('https://img.youtube.com/vi/1SNqRlxxQKA/hqdefault.jpg')`;
+	</script>
+</body>
+</html>
+"
+        ></dangerous-html>
+      </div>
+    </section>
+    <section class="home-quote-container">
+      <div class="home-quote">
+        <span class="home-message">
+          “Scale your content, grew lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.”
+        </span>
+        <div class="home-author">
+          <span class="home-quote1">
+            <span class="home-text14">— </span>
+            <span class="home-text15">J</span>
+            <span class="home-text16">ust</span>
+            <span class="home-text17">K</span>
+            <span class="home-text18">idding</span>
+            <span class="home-text19">C</span>
+            <span class="home-text20">reations</span>
+          </span>
+        </div>
+      </div>
+    </section>
+    <section class="home-banners"></section>
+    <section class="home-integrations">
+      <div class="home-centered-container">
+        <div class="home-heading1">
+          <span class="title">
+            <span>Our socials:</span>
+            <br />
+            <span>(not functional yet)</span>
+            <br />
+          </span>
+        </div>
+        <div class="home-pills-container">
+          <div class="home-pills">
+            <div class="home-container1">
+              <div class="you-tube-you-tube">
+                <img
+                  alt="pastedImage"
+                  src="/playground_assets/pastedimage-smjb.svg"
+                  class="you-tube-pasted-image"
+                />
+              </div>
+              <div class="you-tube-you-tube">
+                <img
+                  alt="pastedImage"
+                  src="/playground_assets/group%201012-200h.png"
+                  class="you-tube-pasted-image"
+                />
+              </div>
+              <div class="you-tube-you-tube">
+                <img
+                  alt="pastedImage"
+                  src="/playground_assets/layer1-200h.png"
+                  class="you-tube-pasted-image"
+                />
+              </div>
+              <div class="you-tube-you-tube">
+                <img
+                  alt="pastedImage"
+                  src="/playground_assets/group-200h.png"
+                  class="you-tube-pasted-image"
+                />
+              </div>
+            </div>
+            <div class="home-container2">
+              <div class="you-tube-you-tube">
+                <img
+                  alt="pastedImage"
+                  src="/playground_assets/pinterest%20logo-200h.png"
+                  class="you-tube-pasted-image"
+                />
+              </div>
+              <div class="you-tube-you-tube">
+                <img
+                  alt="pastedImage"
+                  src="/playground_assets/group%201014-200h.png"
+                  class="you-tube-pasted-image"
+                />
+              </div>
+              <div class="you-tube-you-tube">
+                <img
+                  alt="pastedImage"
+                  src="/playground_assets/group%201015-200h.png"
+                  class="you-tube-pasted-image"
+                />
+              </div>
+              <div class="you-tube-you-tube">
+                <img
+                  alt="pastedImage"
+                  src="/playground_assets/group%201017-200h.png"
+                  class="you-tube-pasted-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="home-footer">
+      <div class="home-top">
+        <div class="home-left1">
+          <span class="home-text26">Subscribe to our newsletter</span>
+          <div class="home-subscription">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="home-textinput input"
+            />
+            <div class="home-subscribe">
+              <span class="home-text27">Subscribe</span>
+            </div>
+          </div>
+          <span class="home-text28">
+            We don&apos;t feel like setting up this part, so it doesn&apos;t
+            actually work. But you can still give us your email if you&apos;d
+            like!
+          </span>
+          <div class="home-contact">
+            <span class="home-text29">Contact</span>
+            <a
+              href="mailto:use@active-app.com?subject=Support"
+              class="home-link"
+            >
+              You can&apos;t contact us.
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="home-bottom">
+        <img
+          alt="pastedImage"
+          src="/playground_assets/1677788737087159-200h.png"
+          class="home-branding"
+        />
+        <span class="home-text30">Copyright © Active - 2022</span>
+      </div>
+    </footer>
+  </main>
+</div>
+  </body>
+</html>
